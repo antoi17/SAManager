@@ -10,7 +10,7 @@ class DataCollection(fname: String, fid: String) {
 
     /* List that represent the number of episodes stored at the indice of its correspoçnding season */
 
-    var nb: MutableList<Int> = mutableListOf<Int>()
+    var nb: MutableList<Int> = mutableListOf<Int>(0, 3)
 
     fun changeEpisodeNumberFromTo(position: Int, value: Int) {
         nb[position] = value
@@ -19,6 +19,4 @@ class DataCollection(fname: String, fid: String) {
     fun addEpisodeOfNewSeason(value: Int) {
         nb.add(value)
     }
-
-
 }

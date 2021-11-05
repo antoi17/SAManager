@@ -33,41 +33,4 @@ class MainActivity : AppCompatActivity() {
         super.onStop()
     }
 
-    private class DataAdapter(context: Context) : BaseAdapter(){
-
-        private val mContext: Context
-        private val data = arrayListOf<DataCollection>(
-            DataCollection("OnePiece", "OP15"),
-            DataCollection("Bleach", "B70")
-        )
-
-        init {
-            mContext = context
-        }
-        override fun getCount(): Int {
-            return data.size
-        }
-
-        override fun getItem(position: Int): Any {
-            return "Test string"
-        }
-
-        override fun getItemId(position: Int): Long {
-            return position.toLong()
-        }
-
-        override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View {
-
-            val layoutInflater = LayoutInflater.from(mContext)
-            val row = layoutInflater.inflate(R.layout.listview_row, parent, false)
-
-            val name = row.findViewById<TextView>(R.id.textView_names)
-            name.text = data[position].name
-            return row
-/*
-
-
- */
-        }
-    }
 }
