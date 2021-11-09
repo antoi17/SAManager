@@ -7,10 +7,8 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.BaseAdapter
-import android.widget.ListAdapter
-import android.widget.ListView
-import android.widget.TextView
+import android.widget.*
+import com.google.android.material.tabs.TabLayout
 
 class MainActivity : AppCompatActivity() {
 
@@ -23,6 +21,9 @@ class MainActivity : AppCompatActivity() {
         val listView = findViewById<ListView>(R.id.list_view)
 
         listView.adapter = DataAdapter(this)
+        listView.visibility = View.VISIBLE
+
+        val tabLayout = findViewById<TableLayout>(R.id.TabLayout)
     }
 
     override fun onPause() {
