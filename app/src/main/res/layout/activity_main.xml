@@ -7,18 +7,20 @@
     tools:context=".MainActivity">
 
     <com.google.android.material.tabs.TabLayout
-        android:id="@+id/TabLayout"
+        android:id="@+id/Tabs"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toTopOf="parent">
 
         <com.google.android.material.tabs.TabItem
+            android:id="@+id/serieTab"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Séries"
             android:icon="@drawable/ic_video"/>
 
         <com.google.android.material.tabs.TabItem
+            android:id="@+id/scanTab"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Animés"
@@ -28,13 +30,13 @@
 
 
     <ListView
-        android:id="@+id/list_view"
+        android:id="@+id/serie_list_view"
         android:layout_width="340dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:visibility="invisible"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/TabLayout">
+        app:layout_constraintTop_toBottomOf="@id/Tabs">
     </ListView>
 </androidx.constraintlayout.widget.ConstraintLayout>
