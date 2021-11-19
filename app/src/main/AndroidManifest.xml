@@ -10,7 +10,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SAManager">
         <activity
-            android:name=".MainActivity"
+            android:name=".Activities.MainActivity2"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

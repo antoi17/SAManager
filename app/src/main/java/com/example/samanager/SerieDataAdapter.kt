@@ -5,17 +5,17 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.BaseAdapter
-import android.widget.Button
 import android.widget.TextView
 
-public class DataAdapter(context: Context) : BaseAdapter(){
+public class
+SerieDataAdapter(context: Context) : BaseAdapter(){
 
     private val mContext: Context = context
     private val layoutInflater: LayoutInflater = LayoutInflater.from(mContext)
 
-    private val data = arrayListOf<DataCollection>(
-        DataCollection("OnePiece", "OP15"),
-        DataCollection("Bleach", "B70")
+    private val data = arrayListOf<SerieDataCollection>(
+        SerieDataCollection("OnePiece", "OP15"),
+        SerieDataCollection("Bleach", "B70")
     )
 
     override fun getCount(): Int {

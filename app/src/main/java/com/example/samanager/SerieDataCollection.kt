@@ -1,6 +1,6 @@
 package com.example.samanager
 
-class DataCollection(fname: String, fid: String) {
+class SerieDataCollection(fname: String, fid: String) {
 
 
     var name = fname
