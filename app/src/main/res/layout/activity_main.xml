@@ -10,24 +10,24 @@
         android:id="@+id/Tabs"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="0dp">
 
         <com.google.android.material.tabs.TabItem
             android:id="@+id/serieTab"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Séries"
-            android:icon="@drawable/ic_video"/>
+            android:icon="@drawable/ic_video"
+            android:text="Séries" />
 
         <com.google.android.material.tabs.TabItem
             android:id="@+id/scanTab"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Animés"
-            android:icon="@drawable/ic_action_name"/>
+            android:icon="@drawable/ic_action_name"
+            android:text="Scans" />
 
     </com.google.android.material.tabs.TabLayout>
-
 
     <ListView
         android:id="@+id/serie_list_view"
@@ -39,4 +39,24 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/Tabs">
     </ListView>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="61dp"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floating_action_button_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|right"
+        android:layout_margin="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/ic_baseline_add_24"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
