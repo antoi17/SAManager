@@ -7,6 +7,8 @@ import android.widget.RadioButton
 import android.widget.RadioGroup
 import android.widget.TextView
 import com.example.samanager.R
+import com.example.samanager.SerieDataAdapter
+import com.example.samanager.SerieDataItem
 import com.example.samanager.TypeOfData
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.textfield.TextInputEditText
@@ -14,8 +16,8 @@ import com.google.android.material.textfield.TextInputLayout
 
 class MainActivity2 : AppCompatActivity() {
 
-    lateinit var name_to_add: String
-    lateinit var type_to_add: TypeOfData
+    private lateinit var name_to_add: String
+    private lateinit var type_to_add: TypeOfData
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -37,7 +39,8 @@ class MainActivity2 : AppCompatActivity() {
             name_to_add = text.text.toString()
             if (radioButtonScan.isChecked) {
                 type_to_add = TypeOfData.scan
-            } else {
+            }
+            else if (radioButtonSerie.isChecked) {
                 type_to_add = TypeOfData.serie
 
             }
@@ -49,12 +52,14 @@ class MainActivity2 : AppCompatActivity() {
                 R.style.ThemeOverlay_MaterialComponents_Light
             )
                 .setTitle("Confirmation de l'ajout")
-                .setMessage("Test")
+                .setMessage("Nom : $name_to_add\nType : $type_to_add")
                 .setNegativeButton("Annuler") { _, _ ->
                     // Respond to negative button press
+
                 }
                 .setPositiveButton("Confirmer") { _, _ ->
                     // Respond to positive button press
+                    //TODO1 fermer l'activité et transferer les données
                 }
                 .show()
         }

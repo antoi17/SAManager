@@ -1,14 +1,15 @@
 package com.example.samanager
 
-class SerieDataCollection(fname: String, fid: String) {
+class SerieDataItem(pname: String, pid: String) {
 
 
-    var name = fname
+    var name = pname
 
-    var id = fid
+    var id = pid
 
 
-    /* List that represent the number of episodes stored at the indice of its correspoçnding season */
+    /* List that represent the number of episodes stored at the indice
+        of its corresponding season */
 
     var nb: MutableList<Int> = mutableListOf<Int>(0, 3)
 

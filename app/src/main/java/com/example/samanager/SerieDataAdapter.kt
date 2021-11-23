@@ -7,15 +7,14 @@ import android.view.ViewGroup
 import android.widget.BaseAdapter
 import android.widget.TextView
 
-public class
-SerieDataAdapter(context: Context) : BaseAdapter(){
+public class SerieDataAdapter(context: Context) : BaseAdapter(){
 
     private val mContext: Context = context
     private val layoutInflater: LayoutInflater = LayoutInflater.from(mContext)
 
-    private val data = arrayListOf<SerieDataCollection>(
-        SerieDataCollection("OnePiece", "OP15"),
-        SerieDataCollection("Bleach", "B70")
+    private val data = arrayListOf<SerieDataItem>(
+        SerieDataItem("OnePiece", "OP15"),
+        SerieDataItem("Bleach", "B70")
     )
 
     override fun getCount(): Int {
